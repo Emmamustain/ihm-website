@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="border-b px-6 py-4 flex items-center">
+      <header className="border-b px-6 py-4 flex items-center bg-white shadow-md sticky top-0 z-30">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo/Home Link */}
           <Link href="/" className="text-xl font-bold text-gray-800">
@@ -19,7 +19,7 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="flex items-center space-x-8">
-            <NavLink href="/a-propos" label="À Propos" pathname={pathname} />
+            <NavLink href="/apropos" label="À Propos" pathname={pathname} />
             <NavLink href="/concepts" label="Concepts" pathname={pathname} />
             <NavLink
               href="/technologies"
@@ -27,16 +27,18 @@ export default function Header() {
               pathname={pathname}
             />
             <NavLink href="/design" label="Design" pathname={pathname} />
-            <NavLink href="/exemples" label="Exemples" pathname={pathname} />
             <NavLink
               href="/ressources"
               label="Ressources"
               pathname={pathname}
             />
+            <NavLink href="/glossaire" label="Glossaire" pathname={pathname} />
             <NavLink
-              href="/communaute"
+              href="/comunaute"
               label="Communauté"
               pathname={pathname}
+              activeColor="text-orange-500"
+              activeBarColor="bg-orange-500"
             />
 
             <button
@@ -89,10 +91,14 @@ function NavLink({
   href,
   label,
   pathname,
+  activeColor = "text-blue-700",
+  activeBarColor = "bg-blue-700",
 }: {
   href: string;
   label: string;
   pathname: string;
+  activeColor?: string;
+  activeBarColor?: string;
 }) {
   const isActive =
     pathname === href || (href !== "/" && pathname.startsWith(href));
@@ -102,13 +108,15 @@ function NavLink({
       href={href}
       className={`relative py-1 transition-colors ${
         isActive
-          ? "text-blue-700 font-medium"
+          ? activeColor + " font-medium"
           : "text-gray-700 hover:text-gray-900"
       }`}
     >
       {label}
       {isActive && (
-        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-700"></div>
+        <div
+          className={`absolute bottom-0 left-0 w-full h-0.5 ${activeBarColor}`}
+        ></div>
       )}
     </Link>
   );

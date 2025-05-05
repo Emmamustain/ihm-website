@@ -1,14 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/header";
+import HeroSection from "@/components/HeroSection";
 
 export default function DesignPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
+      {/* Hero Section */}
+      <HeroSection
+        title="Design et Ergonomie"
+        description="Principes fondamentaux et meilleures pratiques pour concevoir des interfaces centrées sur l'utilisateur."
+        badge="PRINCIPES"
+        highlightedText="Design"
+      />
+
       {/* Main Content */}
-      <main className="p-4 md:p-8 max-w-6xl mx-auto">
+      <main className="p-4 md:p-8 max-w-6xl mx-auto flex-grow">
         <h1 className="text-3xl font-bold mb-2">Design et Ergonomie</h1>
         <div className="h-1 w-20 bg-blue-600 mb-8"></div>
 

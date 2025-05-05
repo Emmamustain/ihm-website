@@ -1,18 +1,23 @@
 import Image from "next/image";
 import { Play } from "lucide-react";
 import Header from "@/components/header";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
-      {/* Main Content */}
-      <main className="p-4 md:p-8 max-w-4xl mx-auto">
-        <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-          Introduction sur l&apos;interface Homme machine
-        </h1>
+      {/* Hero Section */}
+      <HeroSection
+        title="Interface Homme Machine"
+        description="Explorer le monde de l'IHM, où l'interaction entre l'humain et la machine prend vie, et découvrez les principes, techniques et enjeux qui façonnent les interfaces d'aujourd'hui."
+        badge="BIENVENUE"
+        highlightedText="Homme Machine"
+      />
 
+      {/* Main Content */}
+      <main className="p-4 md:p-8 max-w-4xl mx-auto flex-grow">
         {/* Video Section */}
         <div className="relative rounded-xl overflow-hidden mb-8">
           <div className="relative aspect-video bg-gray-100 rounded-xl overflow-hidden">

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Header from "@/components/header";
+import HeroSection from "@/components/HeroSection";
 import {
   BookOpen,
   PenTool,
@@ -14,11 +15,19 @@ import {
 
 export default function APropos() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
+      {/* Hero Section */}
+      <HeroSection
+        title="À propos de notre organisation"
+        description="Découvrez notre mission, notre équipe et nos valeurs."
+        badge="À PROPOS"
+        highlightedText="organisation"
+      />
+
       {/* Main Content */}
-      <main className="p-4 md:p-8 max-w-6xl mx-auto">
+      <main className="p-4 md:p-8 max-w-6xl mx-auto flex-grow">
         <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
           Qui sommes-nous ?
         </h1>
