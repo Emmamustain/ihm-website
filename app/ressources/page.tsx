@@ -267,37 +267,187 @@ export default function RessourcesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Featured Items (placeholders) */}
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div
-                key={item}
-                className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
-              >
-                <div className="relative h-48 w-full bg-gray-200">
-                  {/* Placeholder image */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    <span>Image</span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                    Cours
-                  </span>
-                  <h3 className="font-bold text-gray-800 mt-2 mb-1">
-                    Titre de la ressource
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Description courte de la ressource...
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">25 août 2023</span>
-                    <button className="text-blue-600 text-sm font-medium">
-                      Consulter
-                    </button>
-                  </div>
+            {/* Resource 1 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
+                  <BookOpen className="h-16 w-16 text-blue-700/30" />
                 </div>
               </div>
-            ))}
+              <div className="p-4">
+                <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                  Livre
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  Design d'interfaces et expérience utilisateur
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Une approche complète des principes de conception centrée sur
+                  l'utilisateur...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">12 juin 2023</span>
+                  <a
+                    href="/ressources/livres/design-interfaces"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource 2 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-green-600/10 flex items-center justify-center">
+                  <Newspaper className="h-16 w-16 text-green-700/30" />
+                </div>
+              </div>
+              <div className="p-4">
+                <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                  Article
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  L'avenir des interfaces conversationnelles
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Comment les assistants vocaux et chatbots transforment notre
+                  façon d'interagir...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">
+                    3 septembre 2023
+                  </span>
+                  <a
+                    href="/ressources/articles/interfaces-conversationnelles"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource 3 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-purple-600/10 flex items-center justify-center">
+                  <GraduationCap className="h-16 w-16 text-purple-700/30" />
+                </div>
+              </div>
+              <div className="p-4">
+                <span className="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded-full">
+                  Cours
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  Fondamentaux de l'UX Design
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Formation complète sur les principes et méthodes de conception
+                  d'expérience utilisateur...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">17 juillet 2023</span>
+                  <a
+                    href="/ressources/cours/fondamentaux-ux"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource 4 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-yellow-600/10 flex items-center justify-center">
+                  <BookOpen className="h-16 w-16 text-yellow-700/30" />
+                </div>
+              </div>
+              <div className="p-4">
+                <span className="text-xs font-medium text-yellow-600 bg-yellow-50 px-2 py-1 rounded-full">
+                  Livre
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  Psychologie des interfaces utilisateur
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Comprendre les aspects cognitifs et émotionnels de
+                  l'interaction homme-machine...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">8 août 2023</span>
+                  <a
+                    href="/ressources/livres/psychologie-interfaces"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource 5 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-red-600/10 flex items-center justify-center">
+                  <Newspaper className="h-16 w-16 text-red-700/30" />
+                </div>
+              </div>
+              <div className="p-4">
+                <span className="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">
+                  Article
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  Accessibilité web : bonnes pratiques
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Comment concevoir des interfaces inclusives pour tous les
+                  utilisateurs...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">21 octobre 2023</span>
+                  <a
+                    href="/ressources/articles/accessibilite-web"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Resource 6 */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="mb-4 h-48 relative overflow-hidden">
+                <div className="absolute inset-0 bg-indigo-600/10 flex items-center justify-center">
+                  <GraduationCap className="h-16 w-16 text-indigo-700/30" />
+                </div>
+              </div>
+              <div className="p-4">
+                <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+                  Cours
+                </span>
+                <h3 className="font-bold text-gray-800 mt-2 mb-1">
+                  Design systems : création et gestion
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Apprendre à construire et maintenir un système de design
+                  cohérent et évolutif...
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">5 novembre 2023</span>
+                  <a
+                    href="/ressources/cours/design-systems"
+                    className="text-blue-600 text-sm font-medium inline-flex items-center"
+                  >
+                    Consulter <span className="ml-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

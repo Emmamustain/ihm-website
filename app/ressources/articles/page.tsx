@@ -116,13 +116,10 @@ export default function ArticlesPage() {
             >
               {/* Article Image */}
               <div className="relative h-56 w-full">
-                <Image
-                  src={article.coverImage}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
+                  <Newspaper className="h-16 w-16 text-blue-700/30" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h2 className="text-xl font-bold text-white mb-1 line-clamp-2">
                     {article.title}
@@ -133,13 +130,22 @@ export default function ArticlesPage() {
               {/* Article Content */}
               <div className="p-6 flex-grow flex flex-col">
                 <div className="flex items-center mb-4">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3 border-2 border-white shadow-sm">
-                    <Image
-                      src={article.authorAvatar}
-                      alt={article.author}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3 border-2 border-white shadow-sm bg-gray-100 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-gray-500"
+                    >
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
                   </div>
                   <div>
                     <div className="text-sm text-gray-800 font-semibold">
@@ -159,7 +165,15 @@ export default function ArticlesPage() {
                 <div className="flex items-center justify-between mt-2">
                   <div className="flex space-x-3">
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors shadow-sm">
-                      <Newspaper className="h-4 w-4 mr-2" /> Lire l'article
+                      <Newspaper className="h-4 w-4 mr-2" />
+                      <a
+                        href="https://www.tandfonline.com/toc/hihc20/current"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white"
+                      >
+                        Lire l'article
+                      </a>
                     </button>
                     <button
                       onClick={() => handleSaveArticle(article.title)}

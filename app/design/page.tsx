@@ -29,7 +29,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/cognitive-ergonomics.jpg"
+                  src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&w=400&q=80"
                   alt="Ergonomie cognitive"
                   fill
                   className="object-cover"
@@ -45,9 +45,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/cognitive"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -56,7 +71,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/visual-design.jpg"
+                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
                   alt="Design visuel"
                   fill
                   className="object-cover"
@@ -72,9 +87,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/visual"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -83,7 +113,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/physical-ergonomics.jpg"
+                  src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
                   alt="Ergonomie physique"
                   fill
                   className="object-cover"
@@ -99,9 +129,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/physical"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -110,7 +155,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/emotional-design.jpg"
+                  src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
                   alt="Design émotionnel"
                   fill
                   className="object-cover"
@@ -126,9 +171,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/emotional"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -137,7 +197,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/interaction-design.jpg"
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80"
                   alt="Design d'interaction"
                   fill
                   className="object-cover"
@@ -153,9 +213,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/interaction"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -164,7 +239,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/micro-interactions.jpg"
+                  src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
                   alt="Micro-interactions"
                   fill
                   className="object-cover"
@@ -180,9 +255,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/design/micro-interactions"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Explorer →
+                  Explorer{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -203,7 +293,7 @@ export default function DesignPage() {
                 </h3>
                 <div className="relative h-48 w-full rounded-lg overflow-hidden">
                   <Image
-                    src="/images/gestalt.jpg"
+                    src="/images/G.png"
                     alt="Principles de Gestalt"
                     fill
                     className="object-cover"
@@ -240,10 +330,27 @@ export default function DesignPage() {
                   </li>
                 </ul>
                 <Link
-                  href="/design/gestalt"
-                  className="inline-block mt-4 text-blue-600 font-medium hover:underline"
+                  href="https://www.toptal.com/designers/ui/gestalt-principles-of-design"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center mt-4 text-blue-600 font-medium hover:underline"
                 >
-                  Approfondir ces principes →
+                  Approfondir ces principes
+                  <svg
+                    className="ml-1 inline"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -257,7 +364,7 @@ export default function DesignPage() {
                 </h3>
                 <div className="relative h-48 w-full rounded-lg overflow-hidden">
                   <Image
-                    src="/images/fitts-law.jpg"
+                    src="/images/F.png"
                     alt="Loi de Fitts"
                     fill
                     className="object-cover"
@@ -285,10 +392,27 @@ export default function DesignPage() {
                   </li>
                 </ul>
                 <Link
-                  href="/design/fitts-law"
-                  className="inline-block mt-4 text-blue-600 font-medium hover:underline"
+                  href="https://www.nngroup.com/articles/fitts-law/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center mt-4 text-blue-600 font-medium hover:underline"
                 >
-                  Explorer les implications →
+                  Explorer les implications
+                  <svg
+                    className="ml-1 inline"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -468,13 +592,13 @@ export default function DesignPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/exemples"
-                className="px-6 py-3 bg-white text-blue-700 font-medium rounded-md hover:bg-blue-50 transition-colors"
+                className="inline-block px-6 py-3 bg-white text-blue-700 font-medium rounded-md hover:bg-blue-50 transition-colors flex items-center justify-center"
               >
                 Voir des exemples concrets
               </Link>
               <Link
                 href="/ressources"
-                className="px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors"
+                className="inline-block px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors flex items-center justify-center"
               >
                 Télécharger des ressources
               </Link>
@@ -490,7 +614,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/cognitive-load.jpg"
+                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80"
                   alt="Charge cognitive"
                   fill
                   className="object-cover"
@@ -506,9 +630,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/articles/cognitive-load"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Lire l'article →
+                  Lire l'article{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -516,7 +655,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/color-theory.jpg"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
                   alt="Théorie des couleurs"
                   fill
                   className="object-cover"
@@ -532,9 +671,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/articles/color-theory"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Lire l'article →
+                  Lire l'article{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -542,7 +696,7 @@ export default function DesignPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/images/typography.jpg"
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
                   alt="Typographie"
                   fill
                   className="object-cover"
@@ -558,9 +712,24 @@ export default function DesignPage() {
                 </p>
                 <Link
                   href="/articles/typography"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:underline flex items-center"
                 >
-                  Lire l'article →
+                  Lire l'article{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>

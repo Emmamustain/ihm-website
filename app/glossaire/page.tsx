@@ -709,15 +709,28 @@ export default function GlossairePage() {
     ? glossaryItems
         .map((section) => ({
           letter: section.letter,
-          terms: section.terms.filter(
-            (term) =>
+          terms: section.terms.filter((term) => {
+            // Special case for single character search: filter by starting letter
+            if (searchQuery.length === 1) {
+              const firstChar = searchQuery.toUpperCase();
+              // If it's a number or special character, show items from the "#" section
+              if (/^[^A-Za-z]$/.test(firstChar)) {
+                return section.letter === "#";
+              }
+              // Otherwise filter by the first letter
+              return term.term.toUpperCase().startsWith(firstChar);
+            }
+
+            // For longer searches, use the existing search logic
+            return (
               term.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
               term.definitions.some((def) =>
                 def.description
                   .toLowerCase()
                   .includes(searchQuery.toLowerCase())
               )
-          ),
+            );
+          }),
         }))
         .filter((section) => section.terms.length > 0)
     : glossaryItems;
@@ -727,16 +740,16 @@ export default function GlossairePage() {
       <Header />
 
       {/* Main Content with blue gradient background */}
-      <div className="bg-[#e9f1f9] py-10">
+      <div className="bg-gradient-to-b from-blue-100 to-white py-20 min-h-[50vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center">
           {/* Page Title and Illustration */}
           <div className="flex flex-col items-center mb-8">
             <div className="mb-4">
               <Image
-                src="/images/glosaireimage.png"
+                src="/images/glossaireimage.png"
                 alt="Illustration glossaire"
-                width={80}
-                height={80}
+                width={150}
+                height={150}
                 className="object-contain"
               />
             </div>

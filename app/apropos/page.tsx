@@ -37,9 +37,12 @@ export default function APropos() {
           {/* Card 1 - Notre mission */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="mb-4 h-36 relative overflow-hidden rounded-md">
-              <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                <BookOpen className="h-16 w-16 text-blue-700/30" />
-              </div>
+              <Image
+                src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80"
+                alt="Mission IHM"
+                fill
+                className="object-cover"
+              />
             </div>
             <h2 className="text-xl font-bold text-blue-700 mb-3">
               Notre mission
@@ -59,9 +62,12 @@ export default function APropos() {
           {/* Card 2 - Notre équipe */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="mb-4 h-36 relative overflow-hidden rounded-md">
-              <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                <Users className="h-16 w-16 text-blue-700/30" />
-              </div>
+              <Image
+                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80"
+                alt="Notre équipe"
+                fill
+                className="object-cover"
+              />
             </div>
             <h2 className="text-xl font-bold text-blue-700 mb-3">
               Notre équipe
@@ -80,9 +86,12 @@ export default function APropos() {
           {/* Card 3 - Nos valeurs */}
           <div className="bg-white rounded-lg p-6 border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="mb-4 h-36 relative overflow-hidden rounded-md">
-              <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                <Lightbulb className="h-16 w-16 text-blue-700/30" />
-              </div>
+              <Image
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+                alt="Nos valeurs"
+                fill
+                className="object-cover"
+              />
             </div>
             <h2 className="text-xl font-bold text-blue-700 mb-3">
               Nos valeurs
@@ -191,9 +200,12 @@ export default function APropos() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md">
               <div className="h-64 relative">
-                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                  <Users className="h-24 w-24 text-blue-700/20" />
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80"
+                  alt="Jean Dupont"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Jean Dupont</h3>
@@ -207,9 +219,12 @@ export default function APropos() {
 
             <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md">
               <div className="h-64 relative">
-                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                  <Users className="h-24 w-24 text-blue-700/20" />
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                  alt="Marie Laurent"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Marie Laurent</h3>
@@ -223,9 +238,12 @@ export default function APropos() {
 
             <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md">
               <div className="h-64 relative">
-                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
-                  <Users className="h-24 w-24 text-blue-700/20" />
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80"
+                  alt="Thomas Martin"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Thomas Martin</h3>

@@ -37,16 +37,16 @@ export default function TechnologiesPage() {
         {/* Interface Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Card 1: Interfaces tactiles */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 flex flex-col">
             <div className="relative h-48 w-full">
               <Image
-                src="/images/technologies/interface-tactile.jpg"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80"
                 alt="Interfaces tactiles"
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-xl font-bold text-blue-700 mb-3 border-b border-blue-100 pb-2">
                 Interfaces tactiles
               </h2>
@@ -58,41 +58,45 @@ export default function TechnologiesPage() {
                 <li>Smartphones, tablettes, bornes interactives</li>
                 <li>Gestes : tap, swipe, pinch</li>
               </ul>
-              <Link
-                href="/technologies/tactiles"
-                className="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors flex items-center gap-2"
-              >
-                En savoir plus
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right"
+              <div className="mt-auto">
+                <Link
+                  href="https://www.fujielectric.fr/technologies/ecran-ihm-tactile-industriel-interface-homme-machine/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
                 >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </Link>
+                  <span>En savoir plus</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Card 2: Interfaces vocales */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 flex flex-col">
             <div className="relative h-48 w-full">
               <Image
-                src="/images/technologies/interface-vocale.jpg"
+                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
                 alt="Interfaces vocales"
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-xl font-bold text-blue-700 mb-3 border-b border-blue-100 pb-2">
                 Interfaces vocales
               </h2>
@@ -104,41 +108,45 @@ export default function TechnologiesPage() {
                 <li>Domotique, accessibilité, mobilité</li>
                 <li>Ex : Siri, Alexa, Google Assistant</li>
               </ul>
-              <Link
-                href="/technologies/vocales"
-                className="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors flex items-center gap-2"
-              >
-                En savoir plus
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right"
+              <div className="mt-auto">
+                <Link
+                  href="https://www.usabilis.com/voice-user-interface-vui/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
                 >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </Link>
+                  <span>En savoir plus</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Card 3: Interfaces gestuelles */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 flex flex-col">
             <div className="relative h-48 w-full">
               <Image
-                src="/images/technologies/interface-gestuelle.jpg"
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
                 alt="Interfaces gestuelles"
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-xl font-bold text-blue-700 mb-3 border-b border-blue-100 pb-2">
                 Interfaces gestuelles
               </h2>
@@ -150,27 +158,31 @@ export default function TechnologiesPage() {
                 <li>Jeux vidéo, présentations, santé</li>
                 <li>Ex : Kinect, Leap Motion</li>
               </ul>
-              <Link
-                href="/technologies/gestuelles"
-                className="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors flex items-center gap-2"
-              >
-                En savoir plus
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right"
+              <div className="mt-auto">
+                <Link
+                  href="http://perso.ec-lyon.fr/bertrand.david/ihm-ecl/IHM-multimodales-2005.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
                 >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </Link>
+                  <span>En savoir plus</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -187,14 +199,6 @@ export default function TechnologiesPage() {
                 <h3 className="text-xl font-semibold text-blue-700 mb-4">
                   Réalité augmentée et virtuelle
                 </h3>
-                <div className="relative h-48 w-full rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/technologies/realite-virtuelle.jpg"
-                    alt="Réalité augmentée et virtuelle"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
               </div>
 
               <div className="md:w-2/3">
@@ -220,10 +224,27 @@ export default function TechnologiesPage() {
                   </li>
                 </ul>
                 <Link
-                  href="/technologies/realite-augmentee-virtuelle"
-                  className="inline-block mt-4 text-blue-600 font-medium hover:underline"
+                  href="https://www.futura-sciences.com/tech/questions-reponses/multimedia-realite-virtuelle-realite-augmentee-difference-1962/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center mt-4 text-blue-600 font-medium hover:underline"
                 >
-                  Explorer ces technologies →
+                  <span>Explorer ces technologies</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -235,14 +256,6 @@ export default function TechnologiesPage() {
                 <h3 className="text-xl font-semibold text-blue-700 mb-4">
                   Interfaces cérébrales
                 </h3>
-                <div className="relative h-48 w-full rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/technologies/interface-cerebrale.jpg"
-                    alt="Interfaces cérébrales"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
               </div>
 
               <div className="md:w-2/3">
@@ -263,7 +276,9 @@ export default function TechnologiesPage() {
                   <li>Monitoring cognitif et médical</li>
                 </ul>
                 <Link
-                  href="/technologies/interfaces-cerebrales"
+                  href="https://www.frcneurodon.org/informer-sur-la-recherche/actus/de-nouveaux-progres-dans-le-developpement-des-interfaces-cerveau-machine/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block mt-4 text-blue-600 font-medium hover:underline"
                 >
                   Découvrir les avancées →

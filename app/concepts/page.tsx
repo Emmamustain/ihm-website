@@ -32,6 +32,8 @@ type Concept = {
     description: string;
   }[];
   animation?: boolean;
+  externalLink?: string;
+  externalLabel?: string;
 };
 
 export default function ConceptsPage() {
@@ -65,7 +67,7 @@ export default function ConceptsPage() {
       id: "principles",
       title: "Principes de conception",
       description:
-        "Les fondements pour créer des interfaces intuitives et efficaces",
+        "Les règles fondamentales qui guident la création d'interfaces faciles à comprendre, cohérentes et agréables à utiliser.",
       icon: BookOpen,
       color: "blue",
       points: [
@@ -94,12 +96,15 @@ export default function ConceptsPage() {
             "Suggérer visuellement comment interagir avec les éléments",
         },
       ],
+      externalLink:
+        "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      externalLabel: "En savoir plus sur les principes de conception (NNG)",
     },
     {
       id: "mental-models",
       title: "Modèles mentaux",
       description:
-        "Comment les utilisateurs comprennent et perçoivent le fonctionnement d'un système",
+        "La façon dont les utilisateurs imaginent le fonctionnement d'un système, influençant leurs attentes et leurs actions.",
       icon: Brain,
       color: "green",
       points: [
@@ -125,12 +130,14 @@ export default function ConceptsPage() {
         },
       ],
       animation: true,
+      externalLink: "https://www.nngroup.com/articles/mental-models/",
+      externalLabel: "En savoir plus sur les modèles mentaux (NNG)",
     },
     {
       id: "design-patterns",
       title: "Patterns de design",
       description:
-        "Solutions éprouvées à des problèmes récurrents de conception d'interface",
+        "Des solutions réutilisables pour résoudre des problèmes courants de conception et rendre les interfaces plus efficaces.",
       icon: Layers,
       color: "purple",
       points: [
@@ -153,12 +160,14 @@ export default function ConceptsPage() {
             "Toasts, barres de progression, animations de transition",
         },
       ],
+      externalLink: "https://ui-patterns.com/",
+      externalLabel: "En savoir plus sur les design patterns (UI Patterns)",
     },
     {
       id: "accessibility",
       title: "Accessibilité",
       description:
-        "Créer des interfaces utilisables par tous, quelles que soient les capacités",
+        "L'ensemble des pratiques visant à rendre les interfaces utilisables par tous, y compris les personnes en situation de handicap.",
       icon: Accessibility,
       color: "amber",
       points: [
@@ -181,12 +190,14 @@ export default function ConceptsPage() {
           description: "Compatibilité avec les technologies d'assistance",
         },
       ],
+      externalLink: "https://developer.mozilla.org/fr/docs/Web/Accessibility",
+      externalLabel: "En savoir plus sur l'accessibilité (MDN)",
     },
     {
       id: "evaluation",
       title: "Évaluation",
       description:
-        "Mesurer l'efficacité, l'efficience et la satisfaction procurée par les interfaces",
+        "Les méthodes pour tester et mesurer la qualité, l'utilisabilité et la satisfaction des utilisateurs face à une interface.",
       icon: BarChart3,
       color: "red",
       points: [
@@ -208,11 +219,14 @@ export default function ConceptsPage() {
           description: "SUS, QUIS, UEQ pour mesurer la satisfaction",
         },
       ],
+      externalLink: "https://www.nngroup.com/articles/usability-testing-101/",
+      externalLabel: "En savoir plus sur l'évaluation (NNG)",
     },
     {
       id: "future",
       title: "Futur de l'IHM",
-      description: "Les innovations qui façonnent l'avenir des interfaces",
+      description:
+        "Les innovations et tendances qui transformeront nos interactions avec les technologies dans les années à venir.",
       icon: Rocket,
       color: "indigo",
       points: [
@@ -236,6 +250,10 @@ export default function ConceptsPage() {
         },
       ],
       animation: true,
+      externalLink:
+        "https://www.interaction-design.org/literature/topics/human-computer-interaction",
+      externalLabel:
+        "En savoir plus sur le futur de l'IHM (Interaction Design Foundation)",
     },
   ];
 
@@ -338,6 +356,21 @@ export default function ConceptsPage() {
                 colorClasses[concept.color as keyof typeof colorClasses];
               const isExpanded = expandedConcept === concept.id;
 
+              const conceptImages: Record<string, string> = {
+                principles:
+                  "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&w=400&q=80",
+                "mental-models":
+                  "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80",
+                "design-patterns":
+                  "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+                accessibility:
+                  "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+                evaluation:
+                  "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+                future:
+                  "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+              };
+
               return (
                 <div
                   key={concept.id}
@@ -348,67 +381,47 @@ export default function ConceptsPage() {
                     isExpanded
                       ? "scale-105 z-10"
                       : "hover:shadow-lg hover:-translate-y-1"
-                  }`}
+                  } bg-white`}
                 >
+                  {/* Image en haut, titre sur l'image */}
+                  <div className="h-32 relative flex items-center justify-center">
+                    <img
+                      src={conceptImages[concept.id]}
+                      alt={concept.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="relative w-full flex items-center justify-center h-full">
+                      <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-lg text-center w-full px-2">
+                        {concept.title}
+                      </h3>
+                    </div>
+                  </div>
+                  {/* Contenu bas sur fond coloré - ensure full width and correct background */}
                   <div
-                    className={`${colors.light} p-6 cursor-pointer`}
+                    className={`${colors.light} p-6 cursor-pointer w-full`}
                     onClick={() => toggleConcept(concept.id)}
                   >
-                    <div className="flex justify-between items-start">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className={`${colors.medium} p-2 rounded-lg`}>
-                          <IconComponent className={`h-6 w-6 ${colors.text}`} />
-                        </div>
-                        <h3 className={`text-xl font-bold ${colors.text}`}>
-                          {concept.title}
-                        </h3>
-                      </div>
-                      <button
-                        className="text-gray-500 hover:text-gray-700"
-                        aria-label={isExpanded ? "Réduire" : "Développer"}
-                      >
-                        {isExpanded ? <Minus size={20} /> : <Plus size={20} />}
-                      </button>
-                    </div>
-
                     <p className="text-gray-600 mb-3">{concept.description}</p>
-
-                    {isExpanded && (
-                      <div className="mt-4 space-y-3">
-                        {concept.points.map((point, index) => (
-                          <div key={index} className="flex gap-3 items-start">
-                            <div className="mt-1">
-                              <CheckCircle2
-                                className={`h-5 w-5 ${colors.text}`}
-                              />
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-gray-800">
-                                {point.title}
-                              </h4>
-                              <p className="text-gray-600 text-sm">
-                                {point.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                        <div className="pt-3 mt-2">
-                          <Link
-                            href={`/concepts/${concept.id}`}
-                            className={`inline-flex items-center gap-1 px-4 py-2 text-white rounded-lg ${colors.button} transition-colors`}
-                          >
-                            Explorer en détail <ArrowRight size={16} />
-                          </Link>
-                        </div>
-                      </div>
-                    )}
-
                     {!isExpanded && (
                       <div className="flex items-center text-sm font-medium mt-2">
                         <span className={colors.text}>
                           Cliquez pour en savoir plus
                         </span>
                         <ChevronRight className={`h-4 w-4 ${colors.text}`} />
+                      </div>
+                    )}
+                    {isExpanded && (
+                      <div className="flex justify-end mt-4">
+                        <a
+                          href={concept.externalLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-lg ${colors.button} transition-colors`}
+                        >
+                          {concept.externalLabel || "SAVOIR EN DÉTAILS"}{" "}
+                          <ArrowRight size={16} />
+                        </a>
                       </div>
                     )}
                   </div>
@@ -456,47 +469,20 @@ export default function ConceptsPage() {
                   </div>
 
                   {isExpanded && (
-                    <div className="p-6 bg-white">
-                      <div className="max-w-3xl mx-auto">
-                        <p className="text-gray-700 mb-6">
-                          {concept.description} - Les principes détaillés
-                          ci-dessous vous aideront à comprendre les fondements
-                          et applications pratiques de ce concept en IHM.
-                        </p>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                          {concept.points.map((point, index) => (
-                            <div
-                              key={index}
-                              className={`p-4 rounded-lg ${colors.light} flex gap-4`}
-                            >
-                              <div
-                                className={`p-2 h-fit rounded-full ${colors.medium} flex items-center justify-center`}
-                              >
-                                <span className="font-bold text-sm">
-                                  {index + 1}
-                                </span>
-                              </div>
-                              <div>
-                                <h4 className="font-bold mb-2">
-                                  {point.title}
-                                </h4>
-                                <p className="text-gray-700">
-                                  {point.description}
-                                </p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="mt-8 flex justify-end">
-                          <Link
-                            href={`/concepts/${concept.id}`}
-                            className={`inline-flex items-center gap-2 px-6 py-2 text-white rounded-lg ${colors.button} transition-colors`}
-                          >
-                            Dossier complet <ArrowRight size={16} />
-                          </Link>
-                        </div>
+                    <div className={`${colors.light} p-6`}>
+                      <p className="text-gray-600 mb-3">
+                        {concept.description}
+                      </p>
+                      <div className="flex justify-end mt-4">
+                        <a
+                          href={concept.externalLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-lg ${colors.button} transition-colors`}
+                        >
+                          {concept.externalLabel || "SAVOIR EN DÉTAILS"}{" "}
+                          <ArrowRight size={16} />
+                        </a>
                       </div>
                     </div>
                   )}
@@ -523,67 +509,91 @@ export default function ConceptsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Article 1 */}
             <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-md transition-all">
-              <div className="h-40 bg-gradient-to-r from-blue-600 to-blue-500 relative p-6 flex items-end">
-                <div className="absolute inset-0 opacity-20 bg-pattern"></div>
-                <h3 className="relative text-xl font-bold text-white">
-                  Principes de Jakob Nielsen
-                </h3>
+              <div className="h-40 relative flex items-end">
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                  alt="Principes de Jakob Nielsen"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="relative p-6 flex items-end w-full">
+                  <h3 className="text-xl font-bold text-white drop-shadow-lg w-full">
+                    Principes de Jakob Nielsen
+                  </h3>
+                </div>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-4">
                   Les 10 heuristiques d'utilisabilité qui ont révolutionné la
                   conception d'interfaces utilisateur.
                 </p>
-                <Link
-                  href="/articles/nielsen-principles"
+                <a
+                  href="https://www.interaction-design.org/literature/topics/heuristic-evaluation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 font-medium hover:underline"
                 >
                   Lire l'article <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
 
             {/* Article 2 */}
             <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-md transition-all">
-              <div className="h-40 bg-gradient-to-r from-green-600 to-green-500 relative p-6 flex items-end">
-                <div className="absolute inset-0 opacity-20 bg-pattern"></div>
-                <h3 className="relative text-xl font-bold text-white">
-                  Modèles mentaux en pratique
-                </h3>
+              <div className="h-40 relative flex items-end">
+                <img
+                  src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                  alt="Modèles mentaux en pratique"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="relative p-6 flex items-end w-full">
+                  <h3 className="text-xl font-bold text-white drop-shadow-lg w-full">
+                    Modèles mentaux en pratique
+                  </h3>
+                </div>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-4">
                   Comment identifier et utiliser les modèles mentaux des
                   utilisateurs pour créer des interfaces plus intuitives.
                 </p>
-                <Link
-                  href="/articles/mental-models-practice"
+                <a
+                  href="https://www.interaction-design.org/literature/topics/mental-models"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-green-600 font-medium hover:underline"
                 >
                   Lire l'article <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
 
             {/* Article 3 */}
             <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-md transition-all">
-              <div className="h-40 bg-gradient-to-r from-indigo-600 to-indigo-500 relative p-6 flex items-end">
-                <div className="absolute inset-0 opacity-20 bg-pattern"></div>
-                <h3 className="relative text-xl font-bold text-white">
-                  Évolution des interfaces
-                </h3>
+              <div className="h-40 relative flex items-end">
+                <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
+                  alt="Évolution des interfaces"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="relative p-6 flex items-end w-full">
+                  <h3 className="text-xl font-bold text-white drop-shadow-lg w-full">
+                    Évolution des interfaces
+                  </h3>
+                </div>
               </div>
               <div className="p-6">
                 <p className="text-gray-600 mb-4">
                   Histoire complète de l'évolution des interfaces, des cartes
                   perforées aux interfaces neurales.
                 </p>
-                <Link
-                  href="/articles/interface-evolution"
+                <a
+                  href="https://en.wikipedia.org/wiki/History_of_human%E2%80%93computer_interaction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 font-medium hover:underline"
                 >
                   Lire l'article <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

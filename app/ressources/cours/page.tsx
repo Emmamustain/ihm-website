@@ -117,13 +117,10 @@ export default function CoursPage() {
             >
               {/* Course Image */}
               <div className="relative h-56 w-full">
-                <Image
-                  src={course.coverImage}
-                  alt={course.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-blue-600/10 flex items-center justify-center">
+                  <GraduationCap className="h-16 w-16 text-blue-700/30" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
                     Cours
@@ -139,13 +136,22 @@ export default function CoursPage() {
               {/* Course Content */}
               <div className="p-6 flex-grow flex flex-col">
                 <div className="flex items-center mb-4">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3 border-2 border-white shadow-sm">
-                    <Image
-                      src={course.authorAvatar}
-                      alt={course.author}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3 border-2 border-white shadow-sm bg-gray-100 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-gray-500"
+                    >
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
                   </div>
                   <div>
                     <div className="text-sm text-gray-800 font-semibold">
@@ -164,9 +170,14 @@ export default function CoursPage() {
                 {/* Action Buttons */}
                 <div className="flex items-center justify-between mt-2">
                   <div className="flex space-x-3">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors shadow-sm">
+                    <a
+                      href="https://www.youtube.com/watch?v=SISAtevAJmI&t=1s"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors shadow-sm"
+                    >
                       <Play className="h-4 w-4 mr-2" /> Démarrer le cours
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleSaveCourse(course.title)}
                       className="bg-gray-100 hover:bg-gray-200 border border-gray-300 text-gray-700 hover:text-gray-900 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center transition-colors"
