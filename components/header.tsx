@@ -12,12 +12,11 @@ import {
   Newspaper,
   BrainCircuit,
 } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
   const [showSearch, setShowSearch] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   return (
     <>

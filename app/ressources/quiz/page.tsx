@@ -245,15 +245,6 @@ export default function QuizPage() {
   const [timerActive, setTimerActive] = useState(true);
   const [showHint, setShowHint] = useState(false);
 
-  useEffect(() => {
-    if (timerActive && timeLeft > 0) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-      return () => clearTimeout(timer);
-    } else if (timeLeft === 0 && !showResult) {
-      handleAnswer(null);
-    }
-  }, [timeLeft, timerActive, showResult]);
-
   const handleAnswer = (answerIndex: number | null) => {
     setTimerActive(false);
     setSelectedAnswer(answerIndex);
@@ -280,6 +271,15 @@ export default function QuizPage() {
       });
     }
   };
+
+  useEffect(() => {
+    if (timerActive && timeLeft > 0) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    } else if (timeLeft === 0 && !showResult) {
+      handleAnswer(null);
+    }
+  }, [timeLeft, timerActive, showResult, handleAnswer]);
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {

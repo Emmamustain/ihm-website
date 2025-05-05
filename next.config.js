@@ -1,7 +1,7 @@
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'randomuser.me'],
+    domains: ["images.unsplash.com", "randomuser.me"],
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

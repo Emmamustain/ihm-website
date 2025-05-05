@@ -63,9 +63,9 @@ export default function Home() {
                     Comprendre l'Interface Homme-Machine
                   </h3>
                   <p className="text-white/90 mt-2">
-                    Découvrez les fondements de l'IHM et comment elle façonne
-                    notre interaction quotidienne avec la technologie dans cette
-                    vidéo explicative.
+                    Découvrez les fondements de l&apos;IHM et comment elle
+                    façonne notre interaction quotidienne avec la technologie
+                    dans cette vidéo explicative.
                   </p>
                 </div>
                 <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
@@ -86,8 +86,8 @@ export default function Home() {
               Concepts Fondamentaux
             </h3>
             <p className="text-gray-600 mb-4">
-              Découvrez les principes théoriques qui définissent l'interaction
-              entre l'humain et la machine.
+              Découvrez les principes théoriques qui définissent
+              l&apos;interaction entre l&apos;humain et la machine.
             </p>
             <Link
               href="/concepts"
@@ -146,7 +146,7 @@ export default function Home() {
           </h2>
           <div className="space-y-4 text-gray-600 leading-relaxed">
             <p className="text-lg">
-              Bienvenue sur notre site dédié à l'
+              Bienvenue sur notre site dédié à l&apos;
               <span className="text-blue-600 font-medium">
                 Interaction Homme-Machine (IHM)
               </span>
@@ -154,16 +154,16 @@ export default function Home() {
             </p>
 
             <p>
-              Explorer le monde de l'IHM, c'est découvrir comment les humains
-              interagissent avec les machines au quotidien, à travers des
-              interfaces intuitives, accessibles et efficaces.
+              Explorer le monde de l&apos;IHM, c&apos;est découvrir comment les
+              humains interagissent avec les machines au quotidien, à travers
+              des interfaces intuitives, accessibles et efficaces.
             </p>
 
             <p>
               Que vous soyez étudiant, passionné de design, ou curieux des
               technologies, ce site vous guidera à travers les principes, les
               outils et les bonnes pratiques pour concevoir des interfaces
-              centrées sur l'utilisateur.
+              centrées sur l&apos;utilisateur.
             </p>
 
             <div className="pt-4 border-t border-gray-100 mt-6">
